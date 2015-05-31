@@ -1,7 +1,7 @@
 <?php
 //reading two csv files
-$fileName1 = fopen('D:\xampp\htdocs\test\awards.csv', 'r');
-$fileName2 = fopen('D:\xampp\htdocs\test\contracts.csv', 'r');
+$fileName1 = fopen('awards.csv', 'r');
+$fileName2 = fopen('contracts.csv', 'r');
 
 while (($data = fgetcsv($fileName1, 0, ",")) !== FALSE) {
 
@@ -42,7 +42,7 @@ print_r("Total Amount of current contracts: ".$currenrcon );
 
 // Writing on final.csv
 
-$fileName3 = fopen('D:\xampp\htdocs\test\final.csv', 'w');
+$fileName3 = fopen('final.csv', 'w');
 
 foreach ($newfile as $fields) {
     fputcsv($fileName3, $fields);
